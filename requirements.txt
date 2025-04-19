@@ -1,0 +1,61 @@
+# Software Requirements
+# Python Dependencies
+psutil>=5.9.0
+scapy>=2.5.0
+python-nmap>=0.7.1
+requests>=2.31.0
+matplotlib>=3.7.1
+tkinter>=8.6
+ipaddress>=1.0.23
+reportlab>=4.0.0
+pandas>=2.0.0
+python-docx==0.8.11
+
+# Operating System Requirements
+# Windows:
+- Windows 10 or later
+- Administrator privileges for network scanning
+- Python 3.8 or later
+- Nmap installation (required for network scanning)
+
+# Linux:
+- Ubuntu 20.04 or later
+- Root privileges for network scanning
+- Python 3.8 or later
+- Nmap installation (required for network scanning)
+
+# Hardware Requirements
+# Minimum:
+- CPU: Intel Core i3 or AMD Ryzen 3
+- RAM: 4GB
+- Storage: 10GB free space
+- Network Interface: 100Mbps Ethernet or Wireless
+
+# Recommended:
+- CPU: Intel Core i5 or AMD Ryzen 5
+- RAM: 8GB
+- Storage: 20GB free space
+- Network Interface: 1Gbps Ethernet or Wireless
+
+# Additional Requirements
+# Network:
+- Active internet connection for MAC address database updates
+- Network interface with promiscuous mode support
+- Network administrator privileges for packet capture
+
+# Security:
+- Administrator/Root privileges for network scanning
+- Firewall permissions for network monitoring
+- Antivirus software should allow network scanning
+
+# Display:
+- Minimum resolution: 1366x768
+- Recommended resolution: 1920x1080
+- Color display with at least 16-bit color depth
+
+# Installation Notes:
+1. Install Python 3.8 or later
+2. Install Nmap from https://nmap.org/download.html
+3. Run 'pip install -r requirements.txt' to install Python dependencies
+4. Ensure network interface supports promiscuous mode
+5. Run the application with administrator/root privileges 

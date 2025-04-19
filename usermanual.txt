@@ -1,0 +1,175 @@
+# NETWORK VULNERABILITY REPORT GENERATOR
+# USER MANUAL
+
+## Table of Contents
+1. Introduction
+2. System Requirements
+3. Installation
+4. Getting Started
+5. Interface Overview
+6. Network Interface Selection
+7. Report Options
+8. Generating Reports
+9. Understanding the PDF Report
+10. Troubleshooting
+11. Frequently Asked Questions
+
+## 1. Introduction
+
+The Network Vulnerability Report Generator is a powerful tool designed to scan your local network for devices, identify potential security vulnerabilities, and generate comprehensive PDF reports. This application helps network administrators, security professionals, and home users assess the security posture of their networks.
+
+Key features include:
+- Network device discovery
+- Vulnerability assessment
+- Manufacturer identification using MAC address database
+- Detailed PDF report generation
+- User-friendly interface
+
+## 2. System Requirements
+
+- Operating System: Windows 10/11
+- Python 3.7 or higher
+- Required Python packages (installed automatically):
+  - tkinter
+  - psutil
+  - scapy
+  - reportlab
+  - matplotlib
+  - ipaddress
+
+## 3. Installation
+
+1. Ensure Python is installed on your system
+2. Download the application files
+3. Open a command prompt in the application directory
+4. Run the following command to install required packages:
+   ```
+   pip install -r requirements.txt
+   ```
+5. Run the application:
+   ```
+   python main.py
+   ```
+
+## 4. Getting Started
+
+When you first launch the application, you'll see the main interface with several tabs. The PDF Report Generator is located in the "PDF Report" tab. Click on this tab to access the report generation functionality.
+
+## 5. Interface Overview
+
+The PDF Report Generator interface consists of the following elements:
+
+- **Network Interface Selection**: A dropdown menu to select the network interface to scan
+- **Report Options**: Checkboxes to select what information to include in the report
+- **Status Area**: Displays the current status of the report generation process
+- **Progress Bar**: Shows the progress of the report generation
+- **Generate PDF Report Button**: Initiates the report generation process
+
+## 6. Network Interface Selection
+
+1. Click on the dropdown menu labeled "Select Interface"
+2. A list of available network interfaces will appear
+3. Select the interface you want to scan (typically your active network connection)
+4. The application will automatically detect your WiFi interface if available
+
+## 7. Report Options
+
+The application offers two main report options:
+
+- **Vulnerability Report**: Includes detailed information about potential security vulnerabilities found on devices in your network
+- **Devices in the Network**: Lists all devices discovered on your network with their IP addresses, MAC addresses, manufacturers, and device types
+
+You can select one or both options for your report.
+
+## 8. Generating Reports
+
+To generate a PDF report:
+
+1. Select your network interface from the dropdown menu
+2. Check the report options you want to include
+3. Click the "Generate PDF Report" button
+4. A file dialog will appear asking where to save the PDF
+5. Select a location and filename, then click "Save"
+6. The application will scan your network and generate the report
+7. Progress updates will be displayed in the status area
+8. When complete, a confirmation message will appear
+
+## 9. Understanding the PDF Report
+
+The generated PDF report contains the following sections:
+
+### Title Page
+- Report title and generation date/time
+
+### System Information
+- Details about the system that generated the report
+- Hostname, OS, Python version, CPU cores, and total memory
+
+### Network Information
+- Information about the selected network interface
+- IP address, netmask, MAC address, status, speed, and MTU
+
+### Detailed Findings (if Vulnerability Report option selected)
+- Comprehensive vulnerability information for each device
+- Vulnerabilities are grouped by device and sorted by risk level
+- Each vulnerability includes:
+  - Category
+  - Status
+  - Risk Level (Critical, High, Medium, Low, Info)
+  - MAC Address
+  - Recommendation
+
+### Network Inventory (if Devices in the Network option selected)
+- Complete list of all devices found on the network
+- Information includes:
+  - IP Address
+  - MAC Address
+  - Manufacturer (determined from MAC address)
+  - Device Type
+  - Hostname
+  - Status
+
+### Network Topology
+- Simple text-based diagram showing the network structure
+- Router and connected devices
+
+## 10. Troubleshooting
+
+### No Devices Found
+- Ensure you've selected the correct network interface
+- Check that your network connection is active
+- Verify that devices on your network are powered on and connected
+- Some networks may block ARP scanning; try running the application with administrator privileges
+
+### PDF Generation Fails
+- Ensure you have write permissions to the selected save location
+- Check that the application has access to the oui.csv file for manufacturer lookup
+- Verify that all required Python packages are installed correctly
+
+### Application Crashes
+- Check the console for error messages
+- Ensure you're running the latest version of Python
+- Verify that all dependencies are installed correctly
+
+## 11. Frequently Asked Questions
+
+**Q: Why does the application need administrator privileges?**
+A: The application uses ARP scanning to discover devices on the network, which may require elevated privileges on some systems.
+
+**Q: How accurate is the manufacturer identification?**
+A: The application uses the IEEE OUI database (oui.csv) to identify manufacturers based on MAC address prefixes. This database is regularly updated but may not contain all manufacturers.
+
+**Q: How long does it take to generate a report?**
+A: Report generation time depends on the size of your network and the number of devices. Typically, it takes 30 seconds to 2 minutes for a small to medium-sized network.
+
+**Q: Can I customize the report format?**
+A: The current version does not support customization of the report format. Future versions may include this feature.
+
+**Q: Does the application store any data about my network?**
+A: No, the application does not store any data about your network. All scanning is performed in real-time, and the report is generated based on the current state of your network.
+
+---
+
+For additional support or to report issues, please contact the developer.
+
+© 2023 Network Vulnerability Report Generator 
