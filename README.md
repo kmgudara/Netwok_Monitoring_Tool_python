@@ -42,7 +42,7 @@ In today’s hyper-connected digital world, understanding network activity is es
 | ⚠️ Alerts & Notifications   | Identify suspicious activity and alert the user                              |
 | 🪟 GUI Interface             | Built with Tkinter for ease of use                                           |
 | 🔄 Cross-Platform Support   | Compatible with Windows, macOS, and Linux                                    |
-| 📄 PDF Reporting            | Generate PDF summaries of scan or capture results using `reportlab`          |
+
 
 ---
 
