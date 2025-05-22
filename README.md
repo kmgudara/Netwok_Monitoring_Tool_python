@@ -1,106 +1,74 @@
 # 🧠 Network Monitoring and Device Discovery Tool
 
-A **user-friendly, Python-based** cross-platform application for real-time network monitoring, packet capturing, and device discovery — designed especially for **non-technical users** like home users, educators, and small business owners.
+A user-friendly, Python-based tool that provides real-time traffic monitoring, device discovery, packet capturing, and network visualization — designed especially for **non-technical users**, small businesses, and educators.
 
 ---
 
-## 📘 Table of Contents
+## 📌 Project Overview
 
-- [Overview](#-overview)
-- [Project Objectives](#-project-objectives)
-- [Key Features](#-key-features)
-- [System Architecture](#-system-architecture)
-- [Tools & Technologies](#-tools--technologies)
-- [Installation Guide](#-installation-guide)
-- [Usage Guide](#-usage-guide)
-- [Functional & Non-Functional Requirements](#-requirements)
-- [Prototype & Testing](#-prototype--testing)
-- [Challenges Faced](#-challenges-faced)
-- [Future Enhancements](#-future-enhancements)
-- [Contributors](#-contributors)
-- [License](#-license)
-- [Repository](#-repository)
+In today’s hyper-connected digital world, understanding network activity is essential — but tools like Wireshark and Nmap are too complex for non-technical users. This project addresses this gap by offering an **intuitive Python-based tool** with a clean GUI that allows users to:
 
----
+- Monitor real-time network activity
+- Detect unknown or unauthorized devices
+- Capture and inspect network packets
+- Visualize traffic using interactive charts
 
-## 📄 Overview
-
-This project addresses the gap between highly technical tools (e.g., Wireshark, Nmap) and the needs of everyday users. Most existing tools are command-line based and require deep understanding of networking. Our tool empowers users with:
-
-- Real-time bandwidth monitoring  
-- Detection of unauthorized devices  
-- Packet-level network inspection  
-- Visual traffic analysis  
-- Alerting system for suspicious behavior  
-
-> Developed as part of the **PUSL3190 Computing Project** at Plymouth University.
+> ✅ Developed as the Final Year Project for the BSc (Hons) in Computer Network  
+> 🏫 University: Plymouth University  
+> 🧑‍💻 Developer: Kahadugoda Udara  
+> 🎓 Supervisor: Mr. Chamara Dissanayake  
+> 📅 Submitted: May 2025
 
 ---
 
 ## 🎯 Project Objectives
 
-- Develop a **simplified, cross-platform tool** for network monitoring and device discovery.
-- **Empower non-technical users** to independently manage and secure their networks.
-- Provide an **intuitive GUI** with graphs, alerts, and interactive dashboards.
-- Replace dependency on command-line tools like Wireshark and Nmap.
-- Address **cybersecurity threats** like spoofing, packet sniffing, and bandwidth theft.
+- Simplify network monitoring for non-technical users
+- Design an accessible and visual GUI using Tkinter
+- Integrate packet capture, device discovery, and traffic analysis
+- Ensure cross-platform compatibility (Windows, macOS, Linux)
+- Reduce reliance on command-line tools and technical expertise
 
 ---
 
-## 🖥️ Key Features
+## 🖥 Features
 
-| Module                    | Description                                                                 |
-|--------------------------|-----------------------------------------------------------------------------|
-| 🌐 Real-Time Traffic      | Monitors live bandwidth usage and packet flow.                              |
-| 🧭 Device Discovery       | Scans local network for active devices and displays IP/MAC addresses.       |
-| 📦 Packet Capturing       | Captures packets for deep inspection using Scapy.                           |
-| 📊 Visual Analytics       | Shows bandwidth and device usage in real-time graphs (matplotlib).         |
-| ⚠️ Alerts & Security       | Detects unusual traffic patterns or unauthorized connections.               |
-| 💡 GUI Interface           | Tkinter-powered UI optimized for usability by all levels of users.          |
-| 🪟 Cross-Platform Support | Compatible with Windows, macOS, and Linux.                                 |
-| 📄 PDF Reports            | Generate summaries and vulnerability reports via `reportlab`.              |
-
----
-
-## 🧱 System Architecture
-
-### 🔹 Architecture Layers:
-- **GUI Layer:** Tkinter-based interface with tabs for monitoring, scanning, alerts.
-- **Logic Layer:** Python core managing device discovery, capture, and alerting.
-- **Data Layer:** Stores logs, exports, and configurations locally in JSON/PDF.
-
-### 🖼️ Diagrams Included:
-- High-Level Architecture  
-- Networking Layer Diagram  
-- Use Case & ER Diagrams  
-*(See `/docs/architecture`)*
-  
----
-
-## 🛠️ Tools & Technologies
-
-| Tool         | Purpose                                          |
-|--------------|--------------------------------------------------|
-| Python 3.13  | Programming language                             |
-| Scapy        | Packet sniffing and analysis                     |
-| psutil       | System and network performance metrics           |
-| Tkinter      | GUI development                                  |
-| matplotlib   | Real-time graph plotting                         |
-| reportlab    | PDF report generation                            |
-| ipaddress    | IP data handling and validation                  |
-| Agile Model  | Iterative development and user feedback loop     |
+| Feature                     | Description                                                                 |
+|----------------------------|-----------------------------------------------------------------------------|
+| 🌐 Real-Time Monitoring     | Monitor bandwidth usage and live network traffic                            |
+| 🧭 Device Discovery         | Scan the local network and list connected devices (IP & MAC)                 |
+| 📦 Packet Capturing         | Capture packets using Scapy and inspect protocol-level data                  |
+| 📊 Data Visualization       | View usage graphs, trends, and statistics using `matplotlib`                 |
+| ⚠️ Alerts & Notifications   | Identify suspicious activity and alert the user                              |
+| 🪟 GUI Interface             | Built with Tkinter for ease of use                                           |
+| 🔄 Cross-Platform Support   | Compatible with Windows, macOS, and Linux                                    |
+| 📄 PDF Reporting            | Generate PDF summaries of scan or capture results using `reportlab`          |
 
 ---
 
-## 🔧 Installation Guide
+## 🧰 Tools & Technologies
 
-### 1. Prerequisites
-- Python 3.7 or later (Recommended: Python 3.13)
-- pip package manager
+- **Python 3.13**
+- [`Scapy`](https://scapy.readthedocs.io/en/latest/) – Packet sniffing and manipulation
+- [`psutil`](https://psutil.readthedocs.io/en/latest/) – System and network stats
+- [`Tkinter`](https://tkdocs.com/) – Graphical User Interface
+- [`matplotlib`](https://matplotlib.org/) – Data visualization
+- [`reportlab`](https://www.reportlab.com/) – PDF report generation
+- `ipaddress` – Built-in Python IP address management
 
-### 2. Clone & Install
+---
+
+## 📦 Installation Guide
+
+### ✅ Prerequisites
+
+- Python 3.7 or above (Recommended: Python 3.13)
+- `pip` installed
+
+### 🔧 Setup Instructions
 
 ```bash
 git clone https://github.com/kmgudara/Netwok_Monitoring_Tool_python.git
 cd Netwok_Monitoring_Tool_python
 pip install -r requirements.txt
+python main.py
